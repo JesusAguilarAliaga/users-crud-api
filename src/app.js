@@ -17,7 +17,7 @@ app.use(cors());
 
 app.use(router);
 app.get('/', (req, res) => {
-    return res.send('<p>Bienvenido a express!</p> <a href="/otra-ruta">Ir a la documentación</a>');
+    return res.send('<p>Bienvenido a express!</p> <a href="https://documenter.getpostman.com/view/31976132/2s9YyqjNc5" target="_blank">Ir a la documentación</a>');
 })
 
 // middlewares después de las rutas
