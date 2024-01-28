@@ -1,65 +1,42 @@
-# Template de Servidor Express y Sequelize
+# User CRUD API
+Este proyecto es una API CRUD (Crear, Leer, Actualizar, Eliminar) que gestiona usuarios. Permite realizar operaciones básicas sobre entidades de usuario, como agregar un nuevo usuario, obtener la información de un usuario existente, actualizar los detalles de un usuario y eliminar un usuario.
 
-Este es un template básico para un servidor Express con sequelize con configuraciones comunes. Utiliza las siguientes librerías:
+## Requisitos:
+Asegúrate de tener instalado Node.js en tu sistema. Puedes descargarlo desde nodejs.org.
 
-* cors (v2.8.5): Middleware para permitir solicitudes HTTP desde diferentes dominios.
+## Instalación:
+1. Clona este repositorio en tu máquina local:
+`git clone https://github.com/tu-usuario/user-crud-api.git`
 
-* dotenv (v16.3.2): Carga variables de entorno desde un archivo .env.
+2. Navega al directorio del proyecto:
+`cd user-crud-api`
 
-* express (v4.18.2): Marco web minimalista para la construcción de aplicaciones web y API.
+3. Instala las dependencias del proyecto:
+`npm install`
 
-* helmet (v7.1.0): Middleware que ayuda a proteger las aplicaciones Express configurando varios encabezados HTTP.
-
-* pg (v8.11.3): Controlador de PostgreSQL para Node.js.
-
-* pg-hstore (v2.3.4): Serializador/deserializador para datos JSON y hstore en PostgreSQL.
-
-* sequelize (v6.35.2): ORM para interactuar con bases de datos relacionales.
-
-
-## Instalación
-
-1. Clona este repositorio:
-
-```bash
-git clone https://github.com/Generacion-32/exp-sq-g32.git <NOMBRE_DEL_PROYECTO>
-cd <NOMBRE_DEL_PROYECTO>
-
-```
-2. Tambien puedes hacerlo con el siguiente comando
-
-```
-npx exp-sq-g32
-```
+4. env:
+`BASE_URL=http://localhost:3000`
 
 ## Uso
+Inicia el servidor:
+`npm run dev`
 
->Para usar este template debes contar o crear una base de datos.
+- El servidor estará disponible en http://localhost:3000 (o en el puerto que hayas configurado).
 
-### Modo de Desarrollo
+- Utiliza una herramienta como Postman o curl para interactuar con la API.
 
-Para ejecutar el servidor en modo de desarrollo, utiliza:
+### Endpoints
+- GET /users: Obtiene la lista de todos los usuarios.
+- GET /users/:userId: Obtiene los detalles de un usuario específico.
+- POST /users: Crea un nuevo usuario.
+- PUT /users/:userId: Actualiza los detalles de un usuario existente.
+- DELETE /users/:userId: Elimina un usuario.
+- Ejemplo de solicitud (Postman)
+- GET /users: Obtiene la lista de usuarios.
 
-```
-npm run dev
-```
-Esto iniciará el servidor con Nodemon, que reiniciará automáticamente la aplicación cuando detecte cambios en el código.
-
-## Modo de Producción
-
-Para ejecutar el servidor en modo de producción, utiliza:
-
-```
-npm start
-```
-
-Este comando ejecutará la aplicación en un entorno de producción.
 
 ## Contribuciones
-
-¡Las contribuciones son bienvenidas! Si encuentras algún problema o tienes sugerencias para mejorar el template, no dudes en comunicarla.
+Si encuentras algún error o tienes sugerencias para mejorar la API, por favor, abre un issue o envía una pull request.
 
 ## Licencia
-Este proyecto está bajo la Licencia ISC 
-
-
+Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
